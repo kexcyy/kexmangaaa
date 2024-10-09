@@ -128,11 +128,11 @@
             }
         </style>
         <i class="fas fa-fw fa-bars fa-2x item button" title="Toggle menu" on-click="togglePopup"></i>
-        <span class="title">HakuNeko</span>
+        <span class="title">Kexmanga</span>
         <span class="right">
-            <i class="far fa-fw fa-window-minimize item button" title="Minize HakuNeko" onclick="minimizeWindow()"></i>
-            <i class="far fa-fw fa-window-maximize item button" title="Maximize HakuNeko" onclick="maximizeWindow()"></i>
-            <i class="far fa-fw fa-2x fa-window-close item button" title="Close HakuNeko" onclick="closeWindow()"></i>
+        <i class="far fa-fw fa-window-minimize item button" title="Minize Kexmanga" onclick="minimizeWindow()"></i>
+        <i class="far fa-fw fa-window-maximize item button" title="Maximize Kexmanga" onclick="maximizeWindow()"></i>
+        <i class="far fa-fw fa-2x fa-window-close item button" title="Close Kexmanga" onclick="closeWindow()"></i>
         </span>
         <div class$="popup [[ getPopupClass(popupVisibility) ]]">
             <div class="separator">
@@ -146,8 +146,8 @@
                     <div class="credits">
                         <div>
                             &copy; [[ year ]]
-                            <a class="link button" on-click="openWindow" title="https://git.io/hakuneko" data-href="https://git.io/hakuneko">
-                                HakuNeko
+                            <a class="link button" on-click="openWindow" title="https://github.com/kexcyy" data-href="https://github.com/kexcyy">
+                                Kexmanga
                             </a>
                             rev.
                             <a class="link button" on-click="openWindow" title="Revision History" data-href$="[[ version.revision.link ]]">
@@ -159,24 +159,20 @@
                             <tr>
                                 <td width="1">Development:</td>
                                 <td>
-                                    <a class="link button" on-click="openWindow" data-href="https://github.com/orgs/manga-download/people">Maintainers</a><br>
-                                    <a class="link button" on-click="openWindow" data-href="https://github.com/manga-download/hakuneko/graphs/contributors">Contributors</a>
+                                    <a class="link button" on-click="openWindow" data-href="https://github.com/kexcyy">Profile</a><br>
+                                    <a class="link button" on-click="openWindow" data-href="https://anilist.co/user/kexcyfr">Anilist</a>
                                 </td>
                             </tr>
                             <tr>
-                                <td width="1">Artwork:</td>
+                                <td width="1">My anime website</td>
                                 <td>
-                                    <a class="link button" on-click="openWindow" data-href="https://www.deviantart.com/hakuneko3kune">HakuNeko3Kune</a>
+                                    <a class="link button" on-click="openWindow" data-href="kexani.online">Anime web</a>
                                 </td>
                             </tr>
                             <tr>
-                                <td width="1">Help & Info:</td>
+                                <td width="1">Info:</td>
                                 <td style="font-size: 1.5em; padding-top: 0.25em;">
-                                    <i class="fas fa-fw fa-home button" on-click="openWindow" title="Visit the HakuNeko Homepage" data-href="https://hakuneko.download"></i>
-                                    <i class="fas fa-fw fa-book button" on-click="openWindow" title="Read the Online Documentation" data-href="https://hakuneko.download/docs/interface/"></i>
-                                    <i class="fas fa-fw fa-bug button" on-click="openWindow" title="Open a Ticket on GitHub" data-href="https://hakuneko.download/docs/troubleshoot/"></i>
-                                    <i class="fab fa-fw fa-discord fa-flip-horizontal button" on-click="openWindow" title="Login to the Community Support Channel" data-href="https://discordapp.com/invite/A5d3NDf"></i>
-                                    <i class="fas fa-fw fa-street-view button" on-click="openWindow" title="Show your external IP and Geolocation" data-href="https://ipinfo.io/json"></i>
+                                    <i class="fas fa-fw fa-home button" on-click="openWindow" title="Visit my anime page" data-href="kexani.online"></i>
                                 </td>
                             </tr>
                         </table>
@@ -197,10 +193,10 @@
                         <template is="dom-repeat" items="[[ item.settings ]]">
                             <tr>
                                 <td width="1">
-                                    <label title="[[ item.description ]]"><i class="fas fa-fw fa-info-circle"></i> [[ item.label ]]</label>
+                                    <label title="[[ item.description ]]"><i class="fas fa-fw fa-info-circle"></i> [[ item.label ]] </label>
                                 </td>
                                 <td>
-                                    <hakuneko-input item="{{ item }}"></hakuneko-input>
+                                    <hakuneko-input item="{{ item }}"></hakuneko-input> 
                                 </td>
                             </tr>
                         </template>
@@ -309,6 +305,7 @@
                     this.$.importFile.value = null;
                 }
             }
+
         }
         window.customElements.define(HakunekoMenu.is, HakunekoMenu);
     </script>
